@@ -1,0 +1,30 @@
+.text {
+  text-align: center;
+  font-size: 16vmin;
+  line-height: 18vmin;
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.text--emoji {
+  font-size: 10vmin;
+  line-height: 12vmin;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  transform-origin: 50% 50%;
+  margin: 0 0.1em;
+  cursor: crosshair;
+  text-shadow: 0.025em 0.025em #215CFF, 0.05em 0.05em #FFD605;
+  color: white;
+}
+
+::selection {
+  text-shadow: none;
+  background-color: #FFD605;
+}

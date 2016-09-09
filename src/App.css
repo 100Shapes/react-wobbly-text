@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 2vmin;
+  background-color: #215CFF;
+}
+
+.App::after {
+  content: "";
+  display: block;
+  border: 2.5vmin solid #FFD605;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 5vmin;
+  z-index: 0;
+}
