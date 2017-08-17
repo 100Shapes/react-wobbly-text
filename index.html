@@ -1,24 +1,539 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./src/favicon.ico">
-    <title>React App</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title></title><style>*{box-sizing:border-box}.cxs-display-table{display:table}.cxs-3057891252 pre .hljs-number{color:#1f80ff}.cxs-424651569{font-size:20px}.cxs-3057891252 pre code:before{content:none}.cxs-4066908388{clear:both}.cxs-2262331773{font-size:20px}.cxs-1246195080{margin-left:-8px;margin-right:-8px}.cxs-3057891252{font-size:14px}.cxs-3057891252 h1{font-size:inherit;margin-top:32px}.cxs-3057891252 h1:before{content:"# ";color:#888}.cxs-3057891252 h2{font-size:inherit;margin-top:32px}.cxs-3057891252 h2:before{content:"## ";color:#888}.cxs-3057891252 h3{font-size:inherit}.cxs-3057891252 h3:before{content:"### ";color:#888}.cxs-3057891252 h4{font-size:16px}.cxs-3057891252 h5{font-size:14px}.cxs-3057891252 h6{font-size:12px}.cxs-3057891252 p{overflow-x:auto}.cxs-3057891252 code{font-family:inherit;font-size:inherit;overflow-x:auto;color:#666}.cxs-3057891252 code:before{content:"`"}.cxs-3057891252 code:after{content:"`"}.cxs-3057891252 pre{font-family:inherit;font-size:inherit;overflow-x:auto;color:#666}.cxs-3057891252 pre:before{content:"```";display:block}.cxs-3057891252 pre:after{content:"```";display:block}.cxs-3057891252 pre .hljs-keyword{color:#666}.cxs-3057891252 pre .hljs-built_in{color:#888}.cxs-3057891252 pre .hljs-type{color:#888}.cxs-3057891252 pre .hljs-literal{color:#666}.cxs-3057891252 pre code{}.cxs-3057891252 pre .hljs-regexp{color:#666}.cxs-3057891252 pre .hljs-string{color:#888}.cxs-3057891252 pre .hljs-subst{color:#888}.cxs-3057891252 pre .hljs-symbol{color:#666}.cxs-3057891252 pre .hljs-class{color:#666}.cxs-3057891252 pre .hljs-function{color:#1f80ff}.cxs-3057891252 pre .hljs-title{color:#666}.cxs-3057891252 pre .hljs-params{color:#888}.cxs-3057891252 pre .hljs-comment{color:#888}.cxs-3057891252 pre .hljs-doctag{color:#888}.cxs-3057891252 pre .hljs-meta{color:#888}.cxs-3057891252 pre .hljs-meta-keyword{color:#666}.cxs-3057891252 pre .hljs-meta-string{color:#666}.cxs-3057891252 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px}.cxs-3057891252 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-3057891252 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-3057891252 td{vertical-align:top;line-height:inherit}.cxs-3057891252 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-3057891252 a{color:inherit}.cxs-3057891252 ul{list-style-type:none;padding-left:0px}.cxs-3057891252 li{}.cxs-3057891252 li:before{content:"- "}.cxs-3057891252 b{}.cxs-3057891252 b:before{content:"*"}.cxs-3057891252 b:after{content:"*"}.cxs-3057891252 pre code:after{content:none}@media screen and (min-width: 52em) { .cxs-2262331773{font-size:32px} }@media screen and (min-width: 52em) { .cxs-424651569{} }</style></head><body style="margin:0;"><div class="Xv" style="font-family:Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace;font-weight:400;line-height:1.5;color:#333;background-color:#fff;"><nav style="display:flex;align-items:center;padding-top:8px;padding-bottom:8px;padding-left:16px;padding-right:16px;background-color:#fff;"><a href="https://github.com/100Shapes/wobbly-text" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">GitHub</a><a href="https://npmjs.com/package/happy-text" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">npm</a></nav><header><div style="box-sizing:border-box;max-width:1024px;padding-top:16px;padding-bottom:16px;padding-left:32px;padding-right:32px;"><h1 class="cxs-2262331773" style="box-sizing:border-box;margin:0;">wobbly-text</h1><h2 class="cxs-424651569" style="box-sizing:border-box;margin:0;">Experimental React component for an interactive spinning text treatment </h2><p class="Text" style="box-sizing:border-box;font-size:18px;margin:0;">v0.1.0</p><div class="cxs-1246195080" style="box-sizing:border-box;padding-top:8px;padding-bottom:8px;"><iframe src="https://platform.twitter.com/widgets/tweet_button.html?text=wobbly-text%3A%20Experimental%20React%20component%20for%20an%20interactive%20spinning%20text%20treatment%20&amp;url=&amp;via=&amp;hashtags=&amp;size=" height="20" allowtransparency="true" frameborder="0" scrolling="no" style="box-sizing:border-box;width:61px;overflow:hidden;margin:8px;"></iframe><iframe src="https://ghbtns.com/github-btn.html?type=star&amp;count=true&amp;user=100Shapes&amp;repo=wobbly-text&amp;size=" height="20" frameborder="0" scrolling="no" style="box-sizing:border-box;width:100px;overflow:hidden;margin:8px;"></iframe><div class="cxs-4066908388 cxs-display-table"></div></div></div></header><div class="cxs-3057891252" style="box-sizing:border-box;max-width:1024px;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;"><article style="box-sizing:border-box;"><div><p>This project was bootstrapped with <a href="https://github.com/facebookincubator/create-react-app">Create React App</a>.</p>
+<p>Below you will find some information on how to perform common tasks.<br />You can find the most recent version of this guide <a href="https://github.com/facebookincubator/create-react-app/blob/master/template/README.md">here</a>.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#updating-to-new-releases">Updating to New Releases</a></li>
+<li><a href="#sending-feedback">Sending Feedback</a></li>
+<li><a href="#folder-structure">Folder Structure</a></li>
+<li><a href="#available-scripts">Available Scripts</a><ul>
+<li><a href="#npm-start">npm start</a></li>
+<li><a href="#npm-test">npm test</a></li>
+<li><a href="#npm-run-build">npm run build</a></li>
+<li><a href="#npm-run-eject">npm run eject</a></li>
+</ul>
+</li>
+<li><a href="#displaying-lint-output-in-the-editor">Displaying Lint Output in the Editor</a></li>
+<li><a href="#installing-a-dependency">Installing a Dependency</a></li>
+<li><a href="#importing-a-component">Importing a Component</a></li>
+<li><a href="#adding-a-stylesheet">Adding a Stylesheet</a></li>
+<li><a href="#post-processing-css">Post-Processing CSS</a></li>
+<li><a href="#adding-images-and-fonts">Adding Images and Fonts</a></li>
+<li><a href="#adding-bootstrap">Adding Bootstrap</a></li>
+<li><a href="#adding-flow">Adding Flow</a></li>
+<li><a href="#adding-custom-environment-variables">Adding Custom Environment Variables</a></li>
+<li><a href="#integrating-with-a-node-backend">Integrating with a Node Backend</a></li>
+<li><a href="#proxying-api-requests-in-development">Proxying API Requests in Development</a></li>
+<li><a href="#using-https-in-development">Using HTTPS in Development</a></li>
+<li><a href="#adding-link-and-meta-tags">Adding <code>&lt;link&gt;</code> and <code>&lt;meta&gt;</code> Tags</a><ul>
+<li><a href="#referring-to-static-assets-from-link-href">Referring to Static Assets from <code>&lt;link href&gt;</code></a></li>
+<li><a href="#generating-dynamic-meta-tags-on-the-server">Generating Dynamic <code>&lt;meta&gt;</code> Tags on the Server</a></li>
+</ul>
+</li>
+<li><a href="#running-tests">Running Tests</a><ul>
+<li><a href="#filename-conventions">Filename Conventions</a></li>
+<li><a href="#command-line-interface">Command Line Interface</a></li>
+<li><a href="#version-control-integration">Version Control Integration</a></li>
+<li><a href="#writing-tests">Writing Tests</a></li>
+<li><a href="#testing-components">Testing Components</a></li>
+<li><a href="#using-third-party-assertion-libraries">Using Third Party Assertion Libraries</a></li>
+<li><a href="#initializing-test-environment">Initializing Test Environment</a></li>
+<li><a href="#focusing-and-excluding-tests">Focusing and Excluding Tests</a></li>
+<li><a href="#coverage-reporting">Coverage Reporting</a></li>
+<li><a href="#continuous-integration">Continuous Integration</a></li>
+<li><a href="#disabling-jsdom">Disabling jsdom</a></li>
+<li><a href="#experimental-snapshot-testing">Experimental Snapshot Testing</a></li>
+</ul>
+</li>
+<li><a href="#deployment">Deployment</a><ul>
+<li><a href="#building-for-relative-paths">Building for Relative Paths</a></li>
+<li><a href="#github-pages">GitHub Pages</a></li>
+<li><a href="#heroku">Heroku</a></li>
+<li><a href="#modulus">Modulus</a></li>
+<li><a href="#now">Now</a></li>
+<li><a href="#surge">Surge</a></li>
+</ul>
+</li>
+<li><a href="#something-missing">Something Missing?</a></li>
+</ul>
+<h2>Updating to New Releases</h2>
+<p>Create React App is divided into two packages:</p>
+<ul>
+<li><code>create-react-app</code> is a global command-line utility that you use to create new projects.</li>
+<li><code>react-scripts</code> is a development dependency in the generated projects (including this one).</li>
+</ul>
+<p>You almost never need to update <code>create-react-app</code> itself: it’s delegates all the setup to <code>react-scripts</code>.</p>
+<p>When you run <code>create-react-app</code>, it always creates the project with the latest version of <code>react-scripts</code> so you’ll get all the new features and improvements in newly created apps automatically.</p>
+<p>To update an existing project to a new version of <code>react-scripts</code>, <a href="https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md">open the changelog</a>, find the version you’re currently on (check <code>package.json</code> in this folder if you’re not sure), and apply the migration instructions for the newer versions.</p>
+<p>In most cases bumping the <code>react-scripts</code> version in <code>package.json</code> and running <code>npm install</code> in this folder should be enough, but it’s good to consult the <a href="https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md">changelog</a> for potential breaking changes.</p>
+<p>We commit to keeping the breaking changes minimal so you can upgrade <code>react-scripts</code> painlessly.</p>
+<h2>Sending Feedback</h2>
+<p>We are always open to <a href="https://github.com/facebookincubator/create-react-app/issues">your feedback</a>.</p>
+<h2>Folder Structure</h2>
+<p>After creation, your project should look like this:</p>
+<pre>my-app/
+  README<span class="hljs-selector-class">.md</span>
+  index<span class="hljs-selector-class">.html</span>
+  favicon<span class="hljs-selector-class">.ico</span>
+  node_modules/
+  package<span class="hljs-selector-class">.json</span>
+  src/
+    App<span class="hljs-selector-class">.css</span>
+    App<span class="hljs-selector-class">.js</span>
+    App<span class="hljs-selector-class">.test</span><span class="hljs-selector-class">.js</span>
+    index<span class="hljs-selector-class">.css</span>
+    index<span class="hljs-selector-class">.js</span>
+    logo.svg</pre><p>For the project to build, <strong>these files must exist with exact filenames</strong>:</p>
+<ul>
+<li><code>index.html</code> is the page template;</li>
+<li><code>favicon.ico</code> is the icon you see in the browser tab;</li>
+<li><code>src/index.js</code> is the JavaScript entry point.</li>
+</ul>
+<p>You can delete or rename the other files.</p>
+<p>You may create subdirectories inside <code>src</code>. For faster rebuilds, only files inside <code>src</code> are processed by Webpack.<br />You need to <strong>put any JS and CSS files inside <code>src</code></strong>, or Webpack won’t see them.</p>
+<p>You can, however, create more top-level directories.<br />They will not be included in the production build so you can use them for things like documentation.</p>
+<h2>Available Scripts</h2>
+<p>In the project directory, you can run:</p>
+<h3><code>npm start</code></h3>
+<p>Runs the app in the development mode.<br />
+Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser.</p>
+<p>The page will reload if you make edits.<br />
+You will also see any lint errors in the console.</p>
+<h3><code>npm test</code></h3>
+<p>Launches the test runner in the interactive watch mode.<br />See the section about <a href="#running-tests">running tests</a> for more information.</p>
+<h3><code>npm run build</code></h3>
+<p>Builds the app for production to the <code>build</code> folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.</p>
+<p>The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!</p>
+<h3><code>npm run eject</code></h3>
+<p><strong>Note: this is a one-way operation. Once you <code>eject</code>, you can’t go back!</strong></p>
+<p>If you aren’t satisfied with the build tool and configuration choices, you can <code>eject</code> at any time. This command will remove the single build dependency from your project.</p>
+<p>Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except <code>eject</code> will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.</p>
+<p>You don’t have to ever use <code>eject</code>. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.</p>
+<h2>Displaying Lint Output in the Editor</h2>
+<blockquote>
+<p>Note: this feature is available with <code>react-scripts@0.2.0</code> and higher.</p>
+</blockquote>
+<p>Some editors, including Sublime Text, Atom, and Visual Studio Code, provide plugins for ESLint.</p>
+<p>They are not required for linting. You should see the linter output right in your terminal as well as the browser console. However, if you prefer the lint results to appear right in your editor, there are some extra steps you can do.</p>
+<p>You would need to install an ESLint plugin for your editor first.</p>
+<blockquote>
+<p><strong>A note for Atom <code>linter-eslint</code> users</strong></p>
+<p>If you are using the Atom <code>linter-eslint</code> plugin, make sure that <strong>Use global ESLint installation</strong> option is checked:</p>
+<p><img src="http://i.imgur.com/yVNNHJM.png" /></p>
+</blockquote>
+<p>Then make sure <code>package.json</code> of your project ends with this block:</p>
+<pre>{
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-string">&quot;eslintConfig&quot;</span>: {
+    <span class="hljs-string">&quot;extends&quot;</span>: <span class="hljs-string">&quot;./node_modules/react-scripts/config/eslint.js&quot;</span>
+  }
+}</pre><p>Projects generated with <code>react-scripts@0.2.0</code> and higher should already have it.<br />If you don’t need ESLint integration with your editor, you can safely delete those three lines from your <code>package.json</code>.</p>
+<p>Finally, you will need to install some packages <em>globally</em>:</p>
+<pre>npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx<span class="hljs-_">-a</span>11y eslint-plugin-flowtype</pre><p>We recognize that this is suboptimal, but it is currently required due to the way we hide the ESLint dependency. The ESLint team is already <a href="https://github.com/eslint/eslint/issues/3458">working on a solution to this</a> so this may become unnecessary in a couple of months.</p>
+<h2>Installing a Dependency</h2>
+<p>The generated project includes React and ReactDOM as dependencies. It also includes a set of scripts used by Create React App as a development dependency. You may install other dependencies (for example, React Router) with <code>npm</code>:</p>
+<pre>npm install --save &lt;<span class="hljs-keyword">library</span>-<span class="hljs-keyword">name</span>&gt;</pre><h2>Importing a Component</h2>
+<p>This project setup supports ES6 modules thanks to Babel.<br />While you can still use <code>require()</code> and <code>module.exports</code>, we encourage you to use <a href="http://exploringjs.com/es6/ch_modules.html"><code>import</code> and <code>export</code></a> instead.</p>
+<p>For example:</p>
+<h3><code>Button.js</code></h3>
+<pre><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Button</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-comment">// ...</span>
+  }
+}
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Button; <span class="hljs-comment">// Don’t forget to use export default!</span></pre><h3><code>DangerButton.js</code></h3>
+<pre><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'./Button'</span>; <span class="hljs-comment">// Import a component from another file</span>
 
-      To begin the development, run `npm start` in this folder.
-      To create a production bundle, use `npm run build`.
-    -->
-  </body>
-</html>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DangerButton</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;red&quot;</span> /&gt;</span>;
+  }
+}
+
+export default DangerButton;</span></pre><p>Be aware of the <a href="http://stackoverflow.com/questions/36795819/react-native-es-6-when-should-i-use-curly-braces-for-import/36796281#36796281">difference between default and named exports</a>. It is a common source of mistakes.</p>
+<p>We suggest that you stick to using default imports and exports when a module only exports a single thing (for example, a component). That’s what you get when you use <code>export default Button</code> and <code>import Button from './Button'</code>.</p>
+<p>Named exports are useful for utility modules that export several functions. A module may have at most one default export and as many named exports as you like.</p>
+<p>Learn more about ES6 modules:</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/36795819/react-native-es-6-when-should-i-use-curly-braces-for-import/36796281#36796281">When to use the curly braces?</a></li>
+<li><a href="http://exploringjs.com/es6/ch_modules.html">Exploring ES6: Modules</a></li>
+<li><a href="https://leanpub.com/understandinges6/read#leanpub-auto-encapsulating-code-with-modules">Understanding ES6: Modules</a></li>
+</ul>
+<h2>Adding a Stylesheet</h2>
+<p>This project setup uses <a href="https://webpack.github.io/">Webpack</a> for handling all assets. Webpack offers a custom way of “extending” the concept of <code>import</code> beyond JavaScript. To express that a JavaScript file depends on a CSS file, you need to <strong>import the CSS from the JavaScript file</strong>:</p>
+<h3><code>Button.css</code></h3>
+<pre><span class="hljs-selector-class">.Button</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
+}</pre><h3><code>Button.js</code></h3>
+<pre><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./Button.css'</span>; <span class="hljs-comment">// Tell Webpack that Button.js uses these styles</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Button</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-comment">// You can use them as regular CSS styles</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;Button&quot;</span> /&gt;</span>;
+  }
+}</span></pre><p><strong>This is not required for React</strong> but many people find this feature convenient. You can read about the benefits of this approach <a href="https://medium.com/seek-ui-engineering/block-element-modifying-your-javascript-components-d7f99fcab52b">here</a>. However you should be aware that this makes your code less portable to other build tools and environments than Webpack.</p>
+<p>In development, expressing dependencies this way allows your styles to be reloaded on the fly as you edit them. In production, all CSS files will be concatenated into a single minified <code>.css</code> file in the build output.</p>
+<p>If you are concerned about using Webpack-specific semantics, you can put all your CSS right into <code>src/index.css</code>. It would still be imported from <code>src/index.js</code>, but you could always remove that import if you later migrate to a different build tool.</p>
+<h2>Post-Processing CSS</h2>
+<p>This project setup minifies your CSS and adds vendor prefixes to it automatically through <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> so you don’t need to worry about it.</p>
+<p>For example, this:</p>
+<pre><span class="hljs-selector-class">.App</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: row;
+  <span class="hljs-attribute">align-items</span>: center;
+}</pre><p>becomes this:</p>
+<pre><span class="hljs-selector-class">.App</span> {
+  <span class="hljs-attribute">display</span>: -webkit-box;
+  <span class="hljs-attribute">display</span>: -ms-flexbox;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">-webkit-box-orient</span>: horizontal;
+  <span class="hljs-attribute">-webkit-box-direction</span>: normal;
+      <span class="hljs-attribute">-ms-flex-direction</span>: row;
+          <span class="hljs-attribute">flex-direction</span>: row;
+  <span class="hljs-attribute">-webkit-box-align</span>: center;
+      <span class="hljs-attribute">-ms-flex-align</span>: center;
+          <span class="hljs-attribute">align-items</span>: center;
+}</pre><p>There is currently no support for preprocessors such as Less, or for sharing variables across CSS files.</p>
+<h2>Adding Images and Fonts</h2>
+<p>With Webpack, using static assets like images and fonts works similarly to CSS.</p>
+<p>You can <strong><code>import</code> an image right in a JavaScript module</strong>. This tells Webpack to include that image in the bundle. Unlike CSS imports, importing an image or a font gives you a string value. This value is the final image path you can reference in your code.</p>
+<p>Here is an example:</p>
+<pre><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> logo <span class="hljs-keyword">from</span> <span class="hljs-string">'./logo.png'</span>; <span class="hljs-comment">// Tell Webpack this JS file uses this image</span>
+
+<span class="hljs-built_in">console</span>.log(logo); <span class="hljs-comment">// /logo.84287d09.png</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Header</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// Import result is the URL of your image</span>
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{logo}</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Logo&quot;</span> /&gt;</span>;
+}
+
+export default function Header;</span></pre><p>This works in CSS too:</p>
+<pre><span class="hljs-selector-class">.Logo</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(./logo.png);
+}</pre><p>Webpack finds all relative module references in CSS (they start with <code>./</code>) and replaces them with the final paths from the compiled bundle. If you make a typo or accidentally delete an important file, you will see a compilation error, just like when you import a non-existent JavaScript module. The final filenames in the compiled bundle are generated by Webpack from content hashes. If the file content changes in the future, Webpack will give it a different name in production so you don’t need to worry about long-term caching of assets.</p>
+<p>Please be advised that this is also a custom feature of Webpack.</p>
+<p><strong>It is not required for React</strong> but many people enjoy it (and React Native uses a similar mechanism for images). However it may not be portable to some other environments, such as Node.js and Browserify. If you prefer to reference static assets in a more traditional way outside the module system, please let us know <a href="https://github.com/facebookincubator/create-react-app/issues/28">in this issue</a>, and we will consider support for this.</p>
+<h2>Adding Bootstrap</h2>
+<p>You don’t have to use <a href="https://react-bootstrap.github.io">React Bootstrap</a> together with React but it is a popular library for integrating Bootstrap with React apps. If you need it, you can integrate it with Create React App by following these steps:</p>
+<p>Install React Bootstrap and Bootstrap from NPM. React Bootstrap does not include Bootstrap CSS so this needs to be installed as well:</p>
+<pre>npm <span class="hljs-keyword">install </span>react-<span class="hljs-keyword">bootstrap </span>--save
+npm <span class="hljs-keyword">install </span><span class="hljs-keyword">bootstrap@3 </span>--save</pre><p>Import Bootstrap CSS and optionally Bootstrap theme CSS in the <code>src/index.js</code> file:</p>
+<pre><span class="hljs-keyword">import</span> <span class="hljs-string">'bootstrap/dist/css/bootstrap.css'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'bootstrap/dist/css/bootstrap-theme.css'</span>;</pre><p>Import required React Bootstrap components within <code>src/App.js</code> file or your custom component files:</p>
+<pre><span class="hljs-keyword">import</span> { Navbar, Jumbotron, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-bootstrap'</span>;</pre><p>Now you are ready to use the imported React Bootstrap components within your component hierarchy defined in the render method. Here is an example <a href="https://gist.githubusercontent.com/gaearon/85d8c067f6af1e56277c82d19fd4da7b/raw/6158dd991b67284e9fc8d70b9d973efe87659d72/App.js"><code>App.js</code></a> redone using React Bootstrap.</p>
+<h2>Adding Flow</h2>
+<p>Flow typing is currently <a href="https://github.com/facebookincubator/create-react-app/issues/72">not supported out of the box</a> with the default <code>.flowconfig</code> generated by Flow. If you run it, you might get errors like this:</p>
+<pre>node_modules/fbjs/lib/Deferred.js.flow:<span class="hljs-number">60</span>
+ <span class="hljs-number">60</span>:     <span class="hljs-built_in">Promise</span>.prototype.done.apply(<span class="hljs-keyword">this</span>._promise, <span class="hljs-built_in">arguments</span>);
+                           ^^^^ property <span class="hljs-string">`done`</span>. Property not found <span class="hljs-keyword">in</span>
+<span class="hljs-number">495</span>: declare <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Promise</span>&lt;+<span class="hljs-title">R</span>&gt; </span>{
+     ^ <span class="hljs-built_in">Promise</span>. See lib: <span class="hljs-regexp">/private/</span>tmp/flow/flowlib_34952d31/core.js:<span class="hljs-number">495</span>
+
+node_modules/fbjs/lib/shallowEqual.js.flow:<span class="hljs-number">29</span>
+ <span class="hljs-number">29</span>:     <span class="hljs-keyword">return</span> x !== <span class="hljs-number">0</span> || <span class="hljs-number">1</span> / (x: $FlowIssue) === <span class="hljs-number">1</span> / (y: $FlowIssue);
+                                   ^^^^^^^^^^ identifier <span class="hljs-string">`$FlowIssue`</span>. Could not resolve name
+
+src/App.js:<span class="hljs-number">3</span>
+  <span class="hljs-number">3</span>: <span class="hljs-keyword">import</span> logo <span class="hljs-keyword">from</span> <span class="hljs-string">'./logo.svg'</span>;
+                      ^^^^^^^^^^^^ ./logo.svg. Required <span class="hljs-built_in">module</span> not found
+
+src/App.js:<span class="hljs-number">4</span>
+  <span class="hljs-number">4</span>: <span class="hljs-keyword">import</span> <span class="hljs-string">'./App.css'</span>;
+            ^^^^^^^^^^^ ./App.css. Required <span class="hljs-built_in">module</span> not found
+
+src/index.js:<span class="hljs-number">5</span>
+  <span class="hljs-number">5</span>: <span class="hljs-keyword">import</span> <span class="hljs-string">'./index.css'</span>;
+            ^^^^^^^^^^^^^ ./index.css. Required <span class="hljs-built_in">module</span> not found</pre><p>To fix this, change your <code>.flowconfig</code> to look like this:</p>
+<pre>[libs]
+./node_modules/fbjs/flow/lib
+
+[options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+module.name_mapper='^\(.*\)\.css$' -&gt; 'react-scripts/config/flow/css'
+module.name_mapper='^\(.*\)\.\(jpg\|png\|gif\|eot\|otf\|webp\|svg\|ttf\|woff\|woff2\|mp4\|webm\)$' -&gt; 'react-scripts/config/flow/file'
+
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe</pre><p>Re-run flow, and you shouldn’t get any extra issues.</p>
+<p>If you later <code>eject</code>, you’ll need to replace <code>react-scripts</code> references with the <code>&lt;PROJECT_ROOT&gt;</code> placeholder, for example:</p>
+<pre>module.name_mapper='^\(.*\)\.css$' -&gt; '&lt;PROJECT_ROOT&gt;/config/flow/css'
+module.name_mapper='^\(.*\)\.\(jpg\|png\|gif\|eot\|otf\|webp\|svg\|ttf\|woff\|woff2\|mp4\|webm\)$' -&gt; '&lt;PROJECT_ROOT&gt;/config/flow/file'</pre><p>We will consider integrating more tightly with Flow in the future so that you don’t have to do this.</p>
+<h2>Adding Custom Environment Variables</h2>
+<blockquote>
+<p>Note: this feature is available with <code>react-scripts@0.2.3</code> and higher.</p>
+</blockquote>
+<p>Your project can consume variables declared in your environment as if they were declared locally in your JS files. By
+default you will have <code>NODE_ENV</code> defined for you, and any other environment variables starting with
+<code>REACT_APP_</code>. These environment variables will be defined for you on <code>process.env</code>. For example, having an environment
+variable named <code>REACT_APP_SECRET_CODE</code> will be exposed in your JS as <code>process.env.REACT_APP_SECRET_CODE</code>, in addition
+to <code>process.env.NODE_ENV</code>.</p>
+<p>These environment variables can be useful for displaying information conditionally based on where the project is
+deployed or consuming sensitive data that lives outside of version control.</p>
+<p>First, you need to have environment variables defined, which can vary between OSes. For example, let's say you wanted to
+consume a secret defined in the environment inside a <code>&lt;form&gt;</code>:</p>
+<pre>render() {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>You are running this application in <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{process.env.NODE_ENV}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> mode.<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">defaultValue</span>=<span class="hljs-string">{process.env.REACT_APP_SECRET_CODE}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  );
+}</span></pre><p>The above form is looking for a variable called <code>REACT_APP_SECRET_CODE</code> from the environment. In order to consume this
+value, we need to have it defined in the environment:</p>
+<h4>Windows (cmd.exe)</h4>
+<pre><span class="hljs-built_in">set</span> REACT_APP_SECRET_CODE=abcdef&amp;&amp;npm <span class="hljs-built_in">start</span></pre><p>(Note: the lack of whitespace is intentional.)</p>
+<h4>Linux, OS X (Bash)</h4>
+<pre>REACT_APP_SECRET_CODE=abcdef npm start</pre><blockquote>
+<p>Note: Defining environment variables in this manner is temporary for the life of the shell session. Setting
+permanent environment variables is outside the scope of these docs.</p>
+</blockquote>
+<p>With our environment variable defined, we start the app and consume the values. Remember that the <code>NODE_ENV</code>
+variable will be set for you automatically. When you load the app in the browser and inspect the <code>&lt;input&gt;</code>, you will see
+its value set to <code>abcdef</code>, and the bold text will show the environment provided when using <code>npm start</code>:</p>
+<pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>You are running this application in <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>development<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> mode.<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;abcdef&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre><p>Having access to the <code>NODE_ENV</code> is also useful for performing actions conditionally:</p>
+<pre><span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">'production'</span>) {
+  analytics.disable();
+}</pre><h2>Integrating with a Node Backend</h2>
+<p>Check out <a href="https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/">this tutorial</a> for instructions on integrating an app with a Node backend running on another port, and using <code>fetch()</code> to access it. You can find the companion GitHub repository <a href="https://github.com/fullstackreact/food-lookup-demo">here</a>.</p>
+<h2>Proxying API Requests in Development</h2>
+<blockquote>
+<p>Note: this feature is available with <code>react-scripts@0.2.3</code> and higher.</p>
+</blockquote>
+<p>People often serve the front-end React app from the same host and port as their backend implementation.<br />For example, a production setup might look like this after the app is deployed:</p>
+<pre>/             - <span class="hljs-keyword">static</span> <span class="hljs-keyword">server</span> returns <span class="hljs-keyword">index</span>.html with React app
+/todos        - <span class="hljs-keyword">static</span> <span class="hljs-keyword">server</span> returns <span class="hljs-keyword">index</span>.html with React app
+/api/todos    - <span class="hljs-keyword">server</span> handles any /api<span class="hljs-comment">/* requests using the backend implementation</span></pre><p>Such setup is <strong>not</strong> required. However, if you <strong>do</strong> have a setup like this, it is convenient to write requests like <code>fetch('/api/todos')</code> without worrying about redirecting them to another host or port during development.</p>
+<p>To tell the development server to proxy any unknown requests to your API server in development, add a <code>proxy</code> field to your <code>package.json</code>, for example:</p>
+<pre>  <span class="hljs-string">&quot;proxy&quot;</span>: <span class="hljs-string">&quot;http://localhost:4000&quot;</span>,</pre><p>This way, when you <code>fetch('/api/todos')</code> in development, the development server will recognize that it’s not a static asset, and will proxy your request to <code>http://localhost:4000/api/todos</code> as a fallback. The development server will only attempt to send requests without a <code>text/html</code> accept header to the proxy.</p>
+<p>Conveniently, this avoids <a href="http://stackoverflow.com/questions/21854516/understanding-ajax-cors-and-security-considerations">CORS issues</a> and error messages like this in development:</p>
+<pre>Fetch API cannot <span class="hljs-keyword">load</span> <span class="hljs-keyword">http</span>://localhost:<span class="hljs-number">4000</span>/api/todos. <span class="hljs-keyword">No</span> <span class="hljs-string">'Access-Control-Allow-Origin'</span> header <span class="hljs-keyword">is</span> <span class="hljs-keyword">present</span> <span class="hljs-keyword">on</span> the requested resource. Origin <span class="hljs-string">'http://localhost:3000'</span> <span class="hljs-keyword">is</span> therefore <span class="hljs-keyword">not</span> allowed access. <span class="hljs-keyword">If</span> an <span class="hljs-keyword">opaque</span> response serves your needs, <span class="hljs-keyword">set</span> the request<span class="hljs-string">'s mode to '</span><span class="hljs-keyword">no</span>-cors<span class="hljs-string">' to fetch the resource with CORS disabled.</span></pre><p>Keep in mind that <code>proxy</code> only has effect in development (with <code>npm start</code>), and it is up to you to ensure that URLs like <code>/api/todos</code> point to the right thing in production. You don’t have to use the <code>/api</code> prefix. Any unrecognized request without a <code>text/html</code> accept header will be redirected to the specified <code>proxy</code>.</p>
+<p>Currently the <code>proxy</code> option only handles HTTP requests, and it won’t proxy WebSocket connections.<br />If the <code>proxy</code> option is <strong>not</strong> flexible enough for you, alternatively you can:</p>
+<ul>
+<li>Enable CORS on your server (<a href="http://enable-cors.org/server_expressjs.html">here’s how to do it for Express</a>).</li>
+<li>Use <a href="#adding-custom-environment-variables">environment variables</a> to inject the right server host and port into your app.</li>
+</ul>
+<h2>Using HTTPS in Development</h2>
+<blockquote>
+<p>Note: this feature is available with <code>react-scripts@0.4.0</code> and higher.</p>
+</blockquote>
+<p>You may require the dev server to serve pages over HTTPS. One particular case where this could be useful is when using <a href="#proxying-api-requests-in-development">the &quot;proxy&quot; feature</a> to proxy requests to an API server when that API server is itself serving HTTPS.</p>
+<p>To do this, set the <code>HTTPS</code> environment variable to <code>true</code>, then start the dev server as usual with <code>npm start</code>:</p>
+<h4>Windows (cmd.exe)</h4>
+<pre><span class="hljs-built_in">set</span> HTTPS=true&amp;&amp;npm <span class="hljs-built_in">start</span></pre><p>(Note: the lack of whitespace is intentional.)</p>
+<h4>Linux, OS X (Bash)</h4>
+<pre>HTTPS=<span class="hljs-literal">true</span> npm start</pre><p>Note that the server will use a self-signed certificate, so your web browser will almost definitely display a warning upon accessing the page.</p>
+<h2>Adding <code>&lt;link&gt;</code> and <code>&lt;meta&gt;</code> Tags</h2>
+<p>You can edit the generated <code>index.html</code> and add any tags you’d like to it.</p>
+<h3>Referring to Static Assets from <code>&lt;link href&gt;</code></h3>
+<blockquote>
+<p>Note: this feature is available with <code>react-scripts@0.3.0</code> and higher.</p>
+</blockquote>
+<p>Sometimes, you might want to refer to static assets from <code>index.html</code>. Create React App intentionally does not support serving static assets from a folder because it is too easy to forget to arrange cache invalidation for their filenames. Instead, we recommend that all assets are <a href="#adding-images-and-fonts">handled as part of build process with <code>import</code>s</a>.</p>
+<p>However, you can’t <code>import</code> anything from an HTML file. This is why Create React App automatically treats any <code>&lt;link href&gt;</code> attributes that start with <code>./</code> as a hint that this file needs to be included in the build process. For example, you can use paths like this in <code>index.html</code>:</p>
+<pre><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;shortcut icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./src/favicon.ico&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./src/favicon/favicon-16.png&quot;</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;16x16&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/png&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./src/favicon/favicon-32.png&quot;</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;32x32&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/png&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./src/favicon/favicon-64.png&quot;</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;64x64&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/png&quot;</span>&gt;</span></pre><p>Webpack will parse those <code>&lt;link href&gt;</code> attributes and replace them with real paths.<br />In production, they will become:</p>
+<pre><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;shortcut icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/favicon.ico?fd73a6eb&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/static/media/favicon-16.06a6e0a8.png&quot;</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;16x16&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/png&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/static/media/favicon-32.eb28da34.png&quot;</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;32x32&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/png&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/static/media/favicon-64.91cb3479.png&quot;</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;64x64&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/png&quot;</span>&gt;</span></pre><p>For this to work, <strong>make sure to specify paths relatively</strong> so don’t forget the <code>./</code>:</p>
+<pre><span class="hljs-comment">&lt;!-- Will be resolved by Webpack on build to the real file. --&gt;</span>
+<span class="hljs-comment">&lt;!-- Use this in most cases: --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./src/favicon/favicon-32.png&quot;</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;32x32&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/png&quot;</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- See the ./ here: ^^^ --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Will actually request http://yourserver.com/src/favicon/favicon-32.png. --&gt;</span>
+<span class="hljs-comment">&lt;!-- Only use this if you know this file will appear on your server and is *not* part of your build: --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/src/favicon/favicon-32.png&quot;</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;32x32&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/png&quot;</span>&gt;</span></pre><p>Files starting with <code>./</code> in <code>&lt;link href&gt;</code> attribute will be copied to the <code>static</code> folder inside your <code>build</code> output, and HTML will reference them instead. Webpack will throw a compilation error if any of these files was accidentally deleted or misspelled.</p>
+<p>Their names will also contain the content hashes to make sure the browser cache is busted when the file changes. The only file that is handled specially is <code>favicon.ico</code> which, if present and referenced from HTML, will be always placed at the root so that browsers can find it even when requesting files from the server (such as PDF documents).</p>
+<p>Currently, only <code>&lt;link href&gt;</code> attributes are treated this way. If you need similar support for other HTML tags and attributes, please file an issue describing your use case.</p>
+<p>If you need to use an asset from code rather than from HTML, please read <a href="#adding-images-and-fonts">Adding Images and Fonts</a>. For example, to integrate a library like <a href="https://github.com/tleunen/react-mdl"><code>react-mdl</code></a> that depends on global scripts and styles, <a href="https://github.com/tleunen/react-mdl/pull/388"><code>import</code> them from JavaScript</a>.</p>
+<h3>Generating Dynamic <code>&lt;meta&gt;</code> Tags on the Server</h3>
+<p>Since Create React App doesn’t support server rendering, you might be wondering how to make <code>&lt;meta&gt;</code> tags dynamic and reflect the current URL. To solve this, we recommend to add placeholders into the HTML, like this:</p>
+<pre><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:title&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;$OG_TITLE&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;$OG_DESCRIPTION&quot;</span>&gt;</span></pre><p>Then, on the server, regardless of the backend you use, you can read <code>index.html</code> into memory and replace <code>$OG_TITLE</code>, <code>$OG_DESCRIPTION</code>, and any other placeholders with values depending on the current URL. Just make sure to sanitize and escape the interpolated values so that they are safe to embed into HTML!</p>
+<p>If you use a Node server, you can even share the route matching logic between the client and the server. However duplicating it also works fine in simple cases.</p>
+<h2>Running Tests</h2>
+<blockquote>
+<p>Note: this feature is available with <code>react-scripts@0.3.0</code> and higher.<br /><a href="https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md#migrating-from-023-to-030">Read the migration guide to learn how to enable it in older projects!</a></p>
+</blockquote>
+<p>Create React App uses <a href="https://facebook.github.io/jest/">Jest</a> as its test runner. To prepare for this integration, we did a <a href="https://facebook.github.io/jest/blog/2016/09/01/jest-15.html">major revamp</a> of Jest so if you heard bad things about it years ago, give it another try.</p>
+<p>Jest is a Node-based runner. This means that the tests always run in a Node environment and not in a real browser. This lets us enable fast iteration speed and prevent flakiness.</p>
+<p>While Jest provides browser globals such as <code>window</code> thanks to <a href="https://github.com/tmpvar/jsdom">jsdom</a>, they are only approximations of the real browser behavior. Jest is intended to be used for unit tests of your logic and your components rather than the DOM quirks.</p>
+<p>We recommend that you use a separate tool for browser end-to-end tests if you need them. They are beyond the scope of Create React App.</p>
+<h3>Filename Conventions</h3>
+<p>Jest will look for test files with any of the following popular naming conventions:</p>
+<ul>
+<li>Files with <code>.js</code> suffix in <code>__tests__</code> folders.</li>
+<li>Files with <code>.test.js</code> suffix.</li>
+<li>Files with <code>.spec.js</code> suffix.</li>
+</ul>
+<p>The <code>.test.js</code> / <code>.spec.js</code> files (or the <code>__tests__</code> folders) can be located at any depth under the <code>src</code> top level folder.</p>
+<p>We recommend to put the test files (or <code>__tests__</code> folders) next to the code they are testing so that relative imports appear shorter. For example, if <code>App.test.js</code> and <code>App.js</code> are in the same folder, the test just needs to <code>import App from './App'</code> instead of a long relative path. Colocation also helps find tests more quickly in larger projects.</p>
+<h3>Command Line Interface</h3>
+<p>When you run <code>npm test</code>, Jest will launch in the watch mode. Every time you save a file, it will re-run the tests, just like <code>npm start</code> recompiles the code.</p>
+<p>The watcher includes an interactive command-line interface with the ability to run all tests, or focus on a search pattern. It is designed this way so that you can keep it open and enjoy fast re-runs. You can learn the commands from the “Watch Usage” note that the watcher prints after every run:</p>
+<p><img src="http://facebook.github.io/jest/img/blog/15-watch.gif" /></p>
+<h3>Version Control Integration</h3>
+<p>By default, when you run <code>npm test</code>, Jest will only run the tests related to files changed since the last commit. This is an optimization designed to make your tests runs fast regardless of how many tests you have. However it assumes that you don’t often commit the code that doesn’t pass the tests.</p>
+<p>Jest will always explicitly mention that it only ran tests related to the files changed since the last commit. You can also press <code>a</code> in the watch mode to force Jest to run all tests.</p>
+<p>Jest will always run all tests on a <a href="#continuous-integration">continuous integration</a> server or if the project is not inside a Git or Mercurial repository.</p>
+<h3>Writing Tests</h3>
+<p>To create tests, add <code>it()</code> (or <code>test()</code>) blocks with the name of the test and its code. You may optionally wrap them in <code>describe()</code> blocks for logical grouping but this is neither required nor recommended.</p>
+<p>Jest provides a built-in <code>expect()</code> global function for making assertions. A basic test could look like this:</p>
+<pre><span class="hljs-keyword">import</span> sum <span class="hljs-keyword">from</span> <span class="hljs-string">'./sum'</span>;
+
+it(<span class="hljs-string">'sums numbers'</span>, () =&gt; {
+  expect(sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)).toEqual(<span class="hljs-number">3</span>);
+  expect(sum(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)).toEqual(<span class="hljs-number">4</span>);
+});</pre><p>All <code>expect()</code> matchers supported by Jest are <a href="http://facebook.github.io/jest/docs/api.html#expect-value">extensively documented here</a>.<br />You can also use <a href="http://facebook.github.io/jest/docs/api.html#tobecalled"><code>jest.fn()</code> and <code>expect(fn).toBeCalled()</code></a> to create “spies” or mock functions.</p>
+<h3>Testing Components</h3>
+<p>There is a broad spectrum of component testing techniques. They range from a “smoke test” verifying that a component renders without throwing, to shallow rendering and testing some of the output, to full rendering and testing component lifecycle and state changes.</p>
+<p>Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:</p>
+<pre><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">'./App'</span>;
+
+it(<span class="hljs-string">'renders without crashing'</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> div = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
+  ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>, div);
+});</span></pre><p>This test mounts a component and makes sure that it didn’t throw during rendering. Tests like this provide a lot value with very little effort so they are great as a starting point, and this is the test you will find in <code>src/App.test.js</code>.</p>
+<p>When you encounter bugs caused by changing components, you will gain a deeper insight into which parts of them are worth testing in your application. This might be a good time to introduce more specific tests asserting specific expected output or behavior.</p>
+<p>If you’d like to test components in isolation from the child components they render, we recommend using <a href="http://airbnb.io/enzyme/docs/api/shallow.html"><code>shallow()</code> rendering API</a> from <a href="http://airbnb.io/enzyme/">Enzyme</a>. You can write a smoke test with it too:</p>
+<pre>npm install --save-dev enzyme react-addons-test-utils</pre><pre><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { shallow } <span class="hljs-keyword">from</span> <span class="hljs-string">'enzyme'</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">'./App'</span>;
+
+it(<span class="hljs-string">'renders without crashing'</span>, () =&gt; {
+  shallow(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>);
+});</span></pre><p>Unlike the previous smoke test using <code>ReactDOM.render()</code>, this test only renders <code>&lt;App&gt;</code> and doesn’t go deeper. For example, even if <code>&lt;App&gt;</code> itself renders a <code>&lt;Button&gt;</code> that throws, this test will pass. Shallow rendering is great for isolated unit tests, but you may still want to create some full rendering tests to ensure the components integrate correctly. Enzyme supports <a href="http://airbnb.io/enzyme/docs/api/mount.html">full rendering with <code>mount()</code></a>, and you can also use it for testing state changes and component lifecyle.</p>
+<p>You can read the <a href="http://airbnb.io/enzyme/">Enzyme documentation</a> for more testing techniques. Enzyme documentation uses Chai and Sinon for assertions but you don’t have to use them because Jest provides built-in <code>expect()</code> and <code>jest.fn()</code> for spies.</p>
+<p>Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:</p>
+<pre><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { shallow } <span class="hljs-keyword">from</span> <span class="hljs-string">'enzyme'</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">'./App'</span>;
+
+it(<span class="hljs-string">'renders welcome message'</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> wrapper = shallow(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>);
+  const welcome = <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Welcome to React<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>;
+  // expect(wrapper.contains(welcome)).to.equal(true);
+  expect(wrapper.contains(welcome)).toEqual(true);
+});</span></pre><p>All Jest matchers are <a href="http://facebook.github.io/jest/docs/api.html#expect-value">extensively documented here</a>.<br />Nevertheless you can use a third-party assertion library like Chai if you want to, as described below.</p>
+<h3>Using Third Party Assertion Libraries</h3>
+<p>We recommend that you use <code>expect()</code> for assertions and <code>jest.fn()</code> for spies. If you are having issues with them please <a href="https://github.com/facebook/jest/issues/new">file those against Jest</a>, and we’ll fix them. We intend to keep making them better for React, supporting, for example, <a href="https://github.com/facebook/jest/pull/1566">pretty-printing React elements as JSX</a>.</p>
+<p>However, if you are used to other libraries, such as <a href="http://chaijs.com/">Chai</a> and <a href="http://sinonjs.org/">Sinon</a>, or if you have existing code using them that you’d like to port over, you can import them normally like this:</p>
+<pre><span class="hljs-keyword">import</span> sinon <span class="hljs-keyword">from</span> <span class="hljs-string">'sinon'</span>;
+<span class="hljs-keyword">import</span> { expect } <span class="hljs-keyword">from</span> <span class="hljs-string">'chai'</span>;</pre><p>and then use them in your tests like you normally do.</p>
+<h3>Initializing Test Environment</h3>
+<blockquote>
+<p>Note: this feature is available with <code>react-scripts@0.4.0</code> and higher.</p>
+</blockquote>
+<p>If your app uses a browser API that you need to mock in your tests or if you just need a global setup before running your tests, add a <code>src/setupTests.js</code> to your project. It will be automatically executed before running your tests.</p>
+<p>For example:</p>
+<h4><code>src/setupTests.js</code></h4>
+<pre><span class="hljs-keyword">const</span> localStorageMock = {
+  <span class="hljs-attr">getItem</span>: jest.fn(),
+  <span class="hljs-attr">setItem</span>: jest.fn(),
+  <span class="hljs-attr">clear</span>: jest.fn()
+};
+global.localStorage = localStorageMock</pre><h3>Focusing and Excluding Tests</h3>
+<p>You can replace <code>it()</code> with <code>xit()</code> to temporarily exclude a test from being executed.<br />Similarly, <code>fit()</code> lets you focus on a specific test without running any other tests.</p>
+<h3>Coverage Reporting</h3>
+<p>Jest has an integrated coverage reporter that works well with ES6 and requires no configuration.<br />Run <code>npm test -- --coverage</code> (note extra <code>--</code> in the middle) to include a coverage report like this:</p>
+<p><img src="http://i.imgur.com/5bFhnTS.png" /></p>
+<p>Note that tests run much slower with coverage so it is recommended to run it separately from your normal workflow.</p>
+<h3>Continuous Integration</h3>
+<p>By default <code>npm test</code> runs the watcher with interactive CLI. However, you can force it to run tests once and finish the process by setting an environment variable called <code>CI</code>. Popular CI servers already set it by default but you can do this yourself too:</p>
+<h4>Windows (cmd.exe)</h4>
+<pre><span class="hljs-built_in">set</span> CI=true&amp;&amp;npm test</pre><p>(Note: the lack of whitespace is intentional.)</p>
+<h4>Linux, OS X (Bash)</h4>
+<pre>CI=<span class="hljs-literal">true</span> npm <span class="hljs-built_in">test</span></pre><p>This way Jest will run tests once instead of launching the watcher.</p>
+<p>If you find yourself doing this often in development, please <a href="https://github.com/facebookincubator/create-react-app/issues/new">file an issue</a> to tell us about your use case because we want to make watcher the best experience and are open to changing how it works to accommodate more workflows.</p>
+<h3>Disabling jsdom</h3>
+<p>By default, the <code>package.json</code> of the generated project looks like this:</p>
+<pre>  <span class="hljs-comment">// ...</span>
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;react-scripts test --env=jsdom&quot;</span>
+  }</pre><p>If you know that none of your tests depend on <a href="https://github.com/tmpvar/jsdom">jsdom</a>, you can safely remove <code>--env=jsdom</code>, and your tests will run faster.<br />To help you make up your mind, here is a list of APIs that <strong>need jsdom</strong>:</p>
+<ul>
+<li>Any browser globals like <code>window</code> and <code>document</code></li>
+<li><a href="https://facebook.github.io/react/docs/top-level-api.html#reactdom.render"><code>ReactDOM.render()</code></a></li>
+<li><a href="https://facebook.github.io/react/docs/test-utils.html#renderintodocument"><code>TestUtils.renderIntoDocument()</code></a> (<a href="https://github.com/facebook/react/blob/34761cf9a252964abfaab6faf74d473ad95d1f21/src/test/ReactTestUtils.js#L83-L91">a shortcut</a> for the above)</li>
+<li><a href="http://airbnb.io/enzyme/docs/api/mount.html"><code>mount()</code></a> in <a href="http://airbnb.io/enzyme/index.html">Enzyme</a></li>
+</ul>
+<p>In contrast, <strong>jsdom is not needed</strong> for the following APIs:</p>
+<ul>
+<li><a href="https://facebook.github.io/react/docs/test-utils.html#shallow-rendering"><code>TestUtils.createRenderer()</code></a> (shallow rendering)</li>
+<li><a href="http://airbnb.io/enzyme/docs/api/shallow.html"><code>shallow()</code></a> in <a href="http://airbnb.io/enzyme/index.html">Enzyme</a></li>
+</ul>
+<p>Finally, jsdom is also not needed for <a href="http://facebook.github.io/jest/blog/2016/07/27/jest-14.html">snapshot testing</a>. Longer term, this is the direction we are interested in exploring, but snapshot testing is <a href="https://github.com/facebookincubator/create-react-app/issues/372">not fully baked yet</a> so we don’t officially encourage its usage yet.</p>
+<h3>Experimental Snapshot Testing</h3>
+<p>Snapshot testing is a new feature of Jest that automatically generates text snapshots of your components and saves them on the disk so if the UI output changes, you get notified without manually writing any assertions on the component output.</p>
+<p>This feature is experimental and still <a href="https://github.com/facebookincubator/create-react-app/issues/372">has major usage issues</a> so we only encourage you to use it if you like experimental technology. We intend to gradually improve it over time and eventually offer it as the default solution for testing React components, but this will take time. <a href="http://facebook.github.io/jest/blog/2016/07/27/jest-14.html">Read more about snapshot testing.</a></p>
+<h2>Deployment</h2>
+<h2>Building for Relative Paths</h2>
+<p>By default, Create React App produces a build assuming your app is hosted at the server root.<br />To override this, specify the <code>homepage</code> in your <code>package.json</code>, for example:</p>
+<pre>  <span class="hljs-string">&quot;homepage&quot;</span>: <span class="hljs-string">&quot;http://mywebsite.com/relativepath&quot;</span>,</pre><p>This will let Create React App correctly infer the root path to use in the generated HTML file.</p>
+<h3>GitHub Pages</h3>
+<blockquote>
+<p>Note: this feature is available with <code>react-scripts@0.2.0</code> and higher.</p>
+</blockquote>
+<p>Open your <code>package.json</code> and add a <code>homepage</code> field:</p>
+<pre>  <span class="hljs-string">&quot;homepage&quot;</span>: <span class="hljs-string">&quot;http://myusername.github.io/my-app&quot;</span>,</pre><p><strong>The above step is important!</strong><br />Create React App uses the <code>homepage</code> field to determine the root URL in the built HTML file.</p>
+<p>Now, whenever you run <code>npm run build</code>, you will see a cheat sheet with a sequence of commands to deploy to GitHub pages:</p>
+<pre>git commit -am <span class="hljs-string">&quot;Save local changes&quot;</span>
+git checkout -B gh-pages
+git add <span class="hljs-_">-f</span> build
+git commit -am <span class="hljs-string">&quot;Rebuild website&quot;</span>
+git filter-branch <span class="hljs-_">-f</span> --prune-empty --subdirectory-filter build
+git push <span class="hljs-_">-f</span> origin gh-pages
+git checkout -</pre><p>You may copy and paste them, or put them into a custom shell script. You may also customize them for another hosting provider.</p>
+<p>Note that GitHub Pages doesn't support routers that use the HTML5 <code>pushState</code> history API under the hood (for example, React Router using <code>browserHistory</code>). This is because when there is a fresh page load for a url like <code>http://user.github.io/todomvc/todos/42</code>, where <code>/todos/42</code> is a frontend route, the GitHub Pages server returns 404 because it knows nothing of <code>/todos/42</code>. If you want to add a router to a project hosted on GitHub Pages, here are a couple of solutions:</p>
+<ul>
+<li>You could switch from using HTML5 history API to routing with hashes. If you use React Router, you can switch to <code>hashHistory</code> for this effect, but the URL will be longer and more verbose (for example, <code>http://user.github.io/todomvc/#/todos/42?_k=yknaj</code>). <a href="https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md#histories">Read more</a> about different history implementations in React Router.</li>
+<li>Alternatively, you can use a trick to teach GitHub Pages to handle 404 by redirecting to your <code>index.html</code> page with a special redirect parameter. You would need to add a <code>404.html</code> file with the redirection code to the <code>build</code> folder before deploying your project, and you’ll need to add code handling the redirect parameter to <code>index.html</code>. You can find a detailed explanation of this technique <a href="https://github.com/rafrex/spa-github-pages">in this guide</a>.</li>
+</ul>
+<h3>Heroku</h3>
+<p>Use the <a href="https://github.com/mars/create-react-app-buildpack">Heroku Buildpack for Create React App</a>.<br />You can find instructions in <a href="https://blog.heroku.com/deploying-react-with-zero-configuration">Deploying React with Zero Configuration</a>.</p>
+<h3>Modulus</h3>
+<p>See the <a href="http://blog.modulus.io/deploying-react-apps-on-modulus">Modulus blog post</a> on how to deploy your react app to Modulus.</p>
+<h3>Now</h3>
+<p>See <a href="https://github.com/xkawi/create-react-app-now">this example</a> for a zero-configuration single-command deployment with <a href="https://zeit.co/now">now</a>.</p>
+<h3>Surge</h3>
+<p>Install the Surge CLI if you haven't already by running <code>npm install -g surge</code>. Run the <code>surge</code> command and log in you or create a new account. You just need to specify the <em>build</em> folder and your custom domain, and you are done.</p>
+<pre>              email: email@domain.com
+           password: ********
+       project path: /path/to/project/build
+               size: 7 files, 1.8 MB
+             domain: create-react-app.surge.sh
+             upload: [====================] 100%, eta: 0.0s
+   propagate on CDN: [====================] 100%
+               plan: Free
+              users: email@domain.com
+         IP Address: X.X.X.X
+
+    Success! Project is published and running at create-react-app.surge.sh</pre><p>Note that in order to support routers that use html5 <code>pushState</code> API, you may want to rename the <code>index.html</code> in your build folder to <code>200.html</code> before deploying to Surge. This <a href="https://surge.sh/help/adding-a-200-page-for-client-side-routing">ensures that every URL falls back to that file</a>.</p>
+<h2>Something Missing?</h2>
+<p>If you have ideas for more “How To” recipes that should be on this page, <a href="https://github.com/facebookincubator/create-react-app/issues">let us know</a> or <a href="https://github.com/facebookincubator/create-react-app/edit/master/template/README.md">contribute some!</a></p>
+</div></article></div><footer><div style="box-sizing:border-box;max-width:1024px;margin-bottom:32px;padding-top:8px;padding-bottom:8px;padding-left:32px;padding-right:32px;"><div style="margin-left:-16px;margin-right:-16px;"><a href="https://github.com/100Shapes/wobbly-text" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">GitHub</a><a href="https://github.com/100Shapes" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">100Shapes</a></div><div></div></div></footer></div><div style="font-family:-apple-system, sans-serif;font-size:12px;font-weight:600;text-align:right;padding:24px;color:#333;background-color:#eee;"><a href="http://compositor.io" style="color:inherit;text-decoration:none;">Built with Compositor.io</a></div></body></html>
