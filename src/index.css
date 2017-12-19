@@ -1,22 +1,7 @@
-@import url("//hello.myfonts.net/count/31f54b");
-
-
-@font-face {
-  font-family: 'BrandonTextWeb-Light';
-  src: url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_0_0.eot');
-  src: url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_0_0.eot?#iefix') format('embedded-opentype'), url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_0_0.woff2') format('woff2'), url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_0_0.woff') format('woff'), url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_0_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'BrandonTextWeb-Regular';
-  src: url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_1_0.eot');
-  src: url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_1_0.eot?#iefix') format('embedded-opentype'), url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_1_0.woff2') format('woff2'), url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_1_0.woff') format('woff'), url('http://beryllium.github.100shapes.com/static/webfonts/31F54B_1_0.ttf') format('truetype');
-}
-
 body {
   margin: 0;
   padding: 0;
-  font-family: 'BrandonTextWeb-Regular', sans-serif;
+  font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
   overflow: hidden;
 
   cursor: url(https://s-media-cache-ak0.pinimg.com/236x/ff/76/08/ff7608f6300b109e69f992f699809c4a.jpg), auto;
