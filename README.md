@@ -2,7 +2,7 @@
 
 Experimental React component for an interactive spinning text treatment
 
-![Screen capture of interactive treatment](instagram-post-screenshot.png?raw=true "Happy Friday")
+![Screen capture of interactive treatment](screen-capture.gif?raw=true "Happy Friday!")
 
 ---
 
