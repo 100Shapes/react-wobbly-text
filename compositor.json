@@ -76,7 +76,7 @@
       "metadata": {
         "source": "github.readme"
       },
-      "html": "<h1><code>&lt;WobbyText/&gt;</code></h1>\n\n<p><img src=\"screen-capture.gif?raw=true\"></p>\n<hr>\n<p><a href=\"https://www.instagram.com/p/BKI9JvjghON/\">Instagram post</a></p>\n<p><a href=\"https://www.instagram.com/p/BKI9JvjghON/\"><img src=\"instagram-post-screenshot.png?raw=true\"></a></p>\n<h2>Getting started</h2>\n<ol>\n<li>Look at the source code</li>\n<li>We wish you luck</li>\n</ol>\n"
+      "html": "<h1><code>&lt;WobblyText/&gt;</code></h1>\n\n<p><img src=\"screen-capture.gif?raw=true\"></p>\n<hr>\n<p><a href=\"https://www.instagram.com/p/BKI9JvjghON/\">Instagram post</a></p>\n<p><a href=\"https://www.instagram.com/p/BKI9JvjghON/\"><img src=\"instagram-post-screenshot.png?raw=true\"></a></p>\n<h2>Getting started</h2>\n<ol>\n<li>Look at the source code</li>\n<li>We wish you luck</li>\n</ol>\n"
     },
     {
       "component": "footer",
