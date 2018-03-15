@@ -1,4 +1,4 @@
-# `<WobbyText/>`
+# `<WobblyText/>`
 
 Experimental React component for an interactive spinning text treatment
 
